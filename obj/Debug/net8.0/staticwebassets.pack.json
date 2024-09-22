@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/obj/Debug/net8.0/compressed/k348dkl8oz.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/obj/Debug/net8.0/scopedcss/bundle/quizApp.styles.css",
+      "PackagePath": "staticwebassets/quizApp.styles.css"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece1.png",
+      "PackagePath": "staticwebassets/CakePiece1.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece10.png",
+      "PackagePath": "staticwebassets/CakePiece10.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece11.png",
+      "PackagePath": "staticwebassets/CakePiece11.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece12.png",
+      "PackagePath": "staticwebassets/CakePiece12.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece2.png",
+      "PackagePath": "staticwebassets/CakePiece2.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece3.png",
+      "PackagePath": "staticwebassets/CakePiece3.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece4.png",
+      "PackagePath": "staticwebassets/CakePiece4.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece5.png",
+      "PackagePath": "staticwebassets/CakePiece5.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece6.png",
+      "PackagePath": "staticwebassets/CakePiece6.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece7.png",
+      "PackagePath": "staticwebassets/CakePiece7.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece8.png",
+      "PackagePath": "staticwebassets/CakePiece8.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/CakePiece9.png",
+      "PackagePath": "staticwebassets/CakePiece9.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/sample-data/sampleQuizData.csv",
+      "PackagePath": "staticwebassets/sample-data/sampleQuizData.csv"
+    },
+    {
+      "Id": "/Users/monique/Documents/Git_Public_Projects/quizApp/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.quizApp.props",
+      "PackagePath": "build\\quizApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.quizApp.props",
+      "PackagePath": "buildMultiTargeting\\quizApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.quizApp.props",
+      "PackagePath": "buildTransitive\\quizApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.quizApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

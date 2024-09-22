@@ -1,0 +1,121 @@
+@page "/csvpage"
+@using quizApp.Models;
+@using System.Globalization
+@inject HttpClient Http
+
+<PageTitle>Funny Quiz</PageTitle>
+
+<h1 style="font-family: 'Brush Script MT', cursive; text-align: center;">Fancy Heading for Funny Quiz</h1>
+<div class="outer-border">
+    <div class="mid-border">
+        <div class="container">
+            <!-- check if initialization is done -->
+            @if (@listOfQuizItemsBlazor.Count > 0)
+            {
+                <div class="row">
+                    <h4>@listOfQuizItemsBlazor[index].Question</h4>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <InputSelect @bind-Value="answer" style="font-size:20px;">
+                            <option value="">---</option>
+                            @for (int k = 0; k < listOfQuizItemsBlazor[index].AnswerPossibilities.Count; k++)
+                            {
+                                <option value="@listOfQuizItemsBlazor[index].AnswerPossibilities[k]">
+                                    @listOfQuizItemsBlazor[index].AnswerPossibilities[k]</option>
+                            }
+                        </InputSelect>
+                    </div>
+                    <div class="col-10">
+                        <button class="btn btn-primary" @onclick="Hint">Hint</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <p style="font-size:20px;display:@displayHint">@listOfQuizItemsBlazor[index].Hint</p>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <button style="display:@displayValidateBtn" class="btn btn-primary"
+                            @onclick="Validate">Eingabe</button>
+                    </div>
+                    <div class="col-11">
+                        <button style="display:@displayNextBtn" class="btn btn-primary" @onclick="Next">Weiter</button>
+                    </div>
+                </div>
+                <br>
+            }
+        </div>
+    </div>
+</div>
+
+<img style="display:@displayImage" src="@imageSource" alt="Cake" class="center" />
+
+@code {
+    /* Current number of correctly answered questions */
+    private int currentCount = 0;
+    /* given answer */
+    private String answer { get; set; } = "none";
+    /* display rules */
+    private string displayHint { get; set; } = "none";
+    private string displayImage = "none";
+    private bool validated = false;
+    private string displayNextBtn = "block", displayValidateBtn = "block";
+    /* index of current question */
+    private int index { get; set; } = 0;
+    /* default image source */
+    private String imageSource = "CakePiece1.png";
+    List<QuizItem> listOfQuizItemsBlazor = new List<QuizItem>();
+    protected override async Task OnInitializedAsync()
+    {
+        string csvQuizItem = await Http.GetStringAsync("sample-data/sampleQuizData.csv");
+        List<string> quizItemRows = csvQuizItem.Split("\n").ToList();
+        
+        for (int i = 0; i < quizItemRows.Count; i++)
+        {
+            if (i > 0)
+            {
+                List<string> quizItemStringList = quizItemRows[i].Split(";").ToList();
+                
+                QuizItem quizItem = new QuizItem(
+                    quizItemStringList[0],
+                    quizItemStringList[1].Split(",").ToList(),
+                    quizItemStringList[2],
+                    quizItemStringList[3]
+                );
+                listOfQuizItemsBlazor.Add(quizItem);
+            }
+        }
+    }
+
+    private void Next()
+    {
+        displayHint = "none";
+        validated = false;
+        answer = "none";
+        index++;
+        if(index == listOfQuizItemsBlazor.Count - 1){
+            displayNextBtn = "none";
+        }
+    }
+
+    private void Validate()
+    {
+        if(answer == listOfQuizItemsBlazor[index].RightAnswer && !validated){
+            currentCount++;
+            imageSource = "CakePiece" + currentCount + ".png";
+            validated = true;
+        }
+        if(currentCount == 1){
+            displayImage = "block";
+        }
+        if(currentCount == listOfQuizItemsBlazor.Count){
+            displayValidateBtn = "none";
+        }
+    }
+    private void Hint()
+    {
+        displayHint = "block";  
+    }
+}

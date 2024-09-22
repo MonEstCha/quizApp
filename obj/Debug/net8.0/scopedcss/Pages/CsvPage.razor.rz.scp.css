@@ -1,0 +1,33 @@
+.btn-primary[b-jujwxath9y] {
+    background-color: #594cb7;
+}
+
+.inner-border[b-jujwxath9y] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.outer-border[b-jujwxath9y] {
+	border: 2px solid #d25d7e;
+   	height: 99%;
+    width: 80%;
+    padding: 6px;
+    margin: 0 auto;
+}
+
+.mid-border[b-jujwxath9y] {
+    border: 6px solid #d25d7e;
+    height: 100%;
+    width: 100%;
+    padding: 6px;
+    margin: auto;
+}
+
+.center[b-jujwxath9y] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
